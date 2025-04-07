@@ -67,6 +67,7 @@ Blockchain technology has the potential to revolutionize industries by offering 
 10.   ./network.sh up
 11.    ./network.sh createChannel
 12.    ./network.sh down
+   ![photo_6314183803450541654_y](https://github.com/user-attachments/assets/cd7b4be2-d904-4a26-a988-33c1b4f2f4fe)
 
 
 **IPFS**
