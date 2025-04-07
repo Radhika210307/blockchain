@@ -53,3 +53,17 @@ NFTs (Non-Fungible Tokens): Digital ownership of unique items (art, music, etc.)
 **Regulation:** Governments and regulatory bodies are still figuring out how to manage blockchain-based applications, especially in areas like cryptocurrencies.
 
 Blockchain technology has the potential to revolutionize industries by offering a more transparent, secure, and efficient way of managing data. However, it’s still evolving, and challenges such as scalability and regulatory concerns need to be addressed.
+
+**HYPERLEDGER FEBRIC**
+1.  sudo apt install golang-go
+2.  docker –version
+3.  docker-compose –version
+4.  ls
+5.  git clone -b main https://github.com/hyperledger/fabric-samples.git
+6.  cd fabric-samples
+7.  curl -sSL https://bit.ly/2ysbOFE | bash -s
+8.  cd test-network
+9.   ./network.sh
+10.   ./network.sh up
+11.    ./network.sh createChannel
+12.    ./network.sh down
