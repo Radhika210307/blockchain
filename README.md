@@ -67,3 +67,32 @@ Blockchain technology has the potential to revolutionize industries by offering 
 10.   ./network.sh up
 11.    ./network.sh createChannel
 12.    ./network.sh down
+
+
+**IPFS**
+Commands (IPFS)
+1.	Install the IPFS through WSL: wget https://dist.ipfs.tech/kubo/v0.32.1/kubo_v0.32.1_linux-amd64.tar.gz 
+Or 
+wget https://github.com/ipfs/kubo/releases/download/v0.32.1/kubo_v0.32.1_linux-amd64.tar.gz
+2.	tar -xvzf kubo_v0.32.1_linux-amd64.tar.gz
+3.	Kubo is a reference implementation of IPFS in Go: cd kubo 
+4.	ls
+5.	sudo bash install.sh
+6.	ipfs –version
+7.	ipfs init
+8.	ipfs daemon
+9.	On Browser: http://127.0.0.1:5001/webui
+10.	To run ipfs daemon in background: ipfs daemon > ipfs.log 2>&1 &
+11.	This is daemon ID: [1] 772
+12.	Add file: echo "Hello, IPFS!" > hello.txt
+13.	ipfs add hello.txt
+14.	ipfs cat <CID>
+15.	Add a directory: 
+mkdir myfolder
+echo "File 1 content" > myfolder/file1.txt
+echo "File 2 content" > myfolder/file2.txt
+16.	ipfs add -r myfolder
+17.	ps aux | grep ipfs
+18.	kill <PID>
+19.	in Browser you can directly run this to see the IPFS: https://ipfs.io/ipfs/QmWd9cavD8UGZQcqYBVhZqs2Jure5W9cgxR7S6TC4StfZe
+
