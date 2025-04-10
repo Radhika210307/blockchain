@@ -61,7 +61,7 @@ It is a permissioned blockchain framework designed for enterprise use, offering 
 
 to update the system
 
-sudo apt update
+'''bash sudo apt update'''
 to install golang-go
 
 sudo apt install golang-go
