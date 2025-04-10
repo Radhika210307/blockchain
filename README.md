@@ -107,12 +107,15 @@ cd test-network
 to up the network
 ```bash
 ./network.sh
+```
+```bash
 ./network.sh up
 ```
 to create channel
 ```bash
 ./network.sh createChannel
-```bash
+```
+
 577607d3-e238-48f2-aaed-4b79ad64bb35
 
 to down the network
@@ -146,7 +149,7 @@ sudo bash install.sh
 to initialise ipfs
 ```bash
 ipfs init
-```bash
+```
 a03f8658-b73e-4f68-8e4d-9396b86d367b
 
 to use daemon
