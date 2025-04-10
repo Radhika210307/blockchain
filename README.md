@@ -126,54 +126,64 @@ Practical- 2 : IPFS
 InterPlanetary File System is a decentralized protocol for storing and sharing files across a distributed network. By using content addressing (file hashes), IPFS removes the reliance on centralized servers, providing permanent and efficient file storage. It’s ideal for blockchain applications needing large off-chain data storage.
 
 to install IPFS
-
+```bash
 wget https://dist.ipfs.io/kubo/v0.32.1/kubo_v0.32.1_linux-amd64.tar.gz
+```
 e7b71e7d-a8d3-4b68-a3c9-2ed12403307a
 
 to use kubo
-
+```bash
 tar -xvzf kubo_v0.32.1_linux-amd64.tar.gz
+```
 to get into kubo directory
-
+```bash
 cd kubo
+```
 to move to local bin
-
+```bash
 sudo bash install.sh
+```
 to initialise ipfs
-
+```bash
 ipfs init
+```bash
 a03f8658-b73e-4f68-8e4d-9396b86d367b
 
 to use daemon
-
+```bash
 ipfs daemon
+```
 1a10884d-f0be-43cb-8de2-a9a9d351dbd4 3907b456-4a88-48ba-947a-9a64cdeb1e73
 
 to add file
-
+```bash
 echo "Hello, komal!" > hello.txt
 ipfs add hello.txt
 ipfs cat <CID>
+```
 f2a3158b-e70f-41ab-bac9-7e563878664e
 
 28e2d85e-354f-45ac-adc5-d1c2507255f5
 
 to add a directory
-
+```bash
 mkdir myfolder
 echo "File 1 content" > myfolder/file1.txt
 echo "File 2 content" > myfolder/file2.txt
 ipfs add -r myfolder
+```
 ef29ef9a-0da6-45a2-9e49-d1606524e427
 
 lists running processes
-
+```bash
 ps aux | grep ipfs
+```
 to kill the process
-
+```bash
 kill <PID>
+```bash
 encrypting and decrypting
-
+```bash
 echo "hi komal" > myfile.txt
 ipfs add myfile.txt
 openssl enc -aes-256-cbc -pbkdf2 -iter 100000 -salt -in myfile.txt -out myfile_encrypted.txt -pass pass:yourpassword
@@ -182,23 +192,12 @@ cat myfile_encrypted.txt
 openssl enc -d -aes-256-cbc -pbkdf2 -iter 100000 -in myfile_encrypted.txt -out decrypted_file.txt -pass pass:yourpassword
 cat decrypted_file.txt
 ipfs add decrypted_file.txt
+```
 875effa0-41ee-4b1b-a2ae-9decfb23c4d8
 
 
 
 
-1.  sudo apt install golang-go
-2.  docker –version
-3.  docker-compose –version
-4.  ls
-5.  git clone -b main https://github.com/hyperledger/fabric-samples.git
-6.  cd fabric-samples
-7.  curl -sSL https://bit.ly/2ysbOFE | bash -s
-8.  cd test-network
-9.   ./network.sh
-10.   ./network.sh up
-11.    ./network.sh createChannel
-12.    ./network.sh down
    ![photo_6314183803450541654_y](https://github.com/user-attachments/assets/cd7b4be2-d904-4a26-a988-33c1b4f2f4fe)
 
 
