@@ -158,7 +158,11 @@ ipfs daemon
 to add file
 ```bash
 echo "Hello, komal!" > hello.txt
+```
+```bash
 ipfs add hello.txt
+```
+```bash
 ipfs cat <CID>
 ```
 f2a3158b-e70f-41ab-bac9-7e563878664e
@@ -168,8 +172,14 @@ f2a3158b-e70f-41ab-bac9-7e563878664e
 to add a directory
 ```bash
 mkdir myfolder
+```
+```bash
 echo "File 1 content" > myfolder/file1.txt
+```
+```bash
 echo "File 2 content" > myfolder/file2.txt
+```
+```bash
 ipfs add -r myfolder
 ```
 ef29ef9a-0da6-45a2-9e49-d1606524e427
@@ -181,7 +191,7 @@ ps aux | grep ipfs
 to kill the process
 ```bash
 kill <PID>
-```bash
+```
 encrypting and decrypting
 ```bash
 echo "hi komal" > myfile.txt
@@ -189,14 +199,18 @@ echo "hi komal" > myfile.txt
 ```bash
 ipfs add myfile.txt
 ```
+```bash
 openssl enc -aes-256-cbc -pbkdf2 -iter 100000 -salt -in myfile.txt -out myfile_encrypted.txt -pass pass:yourpassword
+```
 ```bash
 ipfs add myfile_encrypted.txt
 ```
 ```bash
 cat myfile_encrypted.txt
 ```
+```bash
 openssl enc -d -aes-256-cbc -pbkdf2 -iter 100000 -in myfile_encrypted.txt -out decrypted_file.txt -pass pass:yourpassword
+```
 ```bash
 cat decrypted_file.txt
 ```
