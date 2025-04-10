@@ -65,47 +65,63 @@ sudo apt update
 ```
 to install golang-go
 
+```bash
 sudo apt install golang-go
+```
 to install docker
-
+```bash
 sudo snap install docker
+```
 8a8af518-ddc5-45bb-b015-31e93945fda8
 
 to install git
-
+```bash
 sudo apt install git
+```
 to install fabric-samples
-
+```bash
 git clone -b main https://github.com/hyperledger/fabric-samples.git
+```
 to install curl
-
+```bash
 sudo apt install curl
+```
 to get in fabric-samples
-
+```bash
 cd fabric-samples
+```
 2cba31d9-fc1d-48dc-902f-70a5779f3526
 
 to pull hyperledger docker images
-
+```bash
 sudo bash
 curl -sSL https://bit.ly/2ysbOFE | bash -s
+```
+
 ed4f2ca3-9832-4180-aae7-cd793f2fc674
 
 to get into test network
-
+```bash
 cd test-network
+```
 to up the network
-
+```bash
 ./network.sh
 ./network.sh up
+```
 to create channel
-
+```bash
 ./network.sh createChannel
+```bash
 577607d3-e238-48f2-aaed-4b79ad64bb35
 
 to down the network
-
+```bash
 ./network.sh down
+```
+
+
+
 Practical- 2 : IPFS
 InterPlanetary File System is a decentralized protocol for storing and sharing files across a distributed network. By using content addressing (file hashes), IPFS removes the reliance on centralized servers, providing permanent and efficient file storage. It’s ideal for blockchain applications needing large off-chain data storage.
 
