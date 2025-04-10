@@ -228,4 +228,185 @@ ipfs add decrypted_file.txt
    ![photo_6314183803450541654_y](https://github.com/user-attachments/assets/cd7b4be2-d904-4a26-a988-33c1b4f2f4fe)
 
 
-**IPFS**
+Practical-3 Metamask
+What is metamask? MetaMask is a crypto wallet and gateway to blockchain applications. It lets you store, manage, and transfer cryptocurrencies, especially those on the Ethereum blockchain and other EVM-compatible networks (like BNB Chain, Polygon, Arbitrum, etc.).
+
+Steps to Create a MetaMask Account
+
+Step 1: Install MetaMask Browser Extension: Go to https://metamask.io and download the extension for Chrome, Firefox, Brave, or Edge.
+
+Mobile App: Alternatively, install the MetaMask app from Google Play Store or Apple App Store.
+
+Step 2: Create a New Wallet Click “Get Started”.
+
+Choose “Create a Wallet”.
+
+Set a strong password (at least 8 characters).
+
+Agree to the terms and conditions.
+
+Step 3: Backup the Secret Recovery Phrase MetaMask will generate a 12-word Secret Recovery Phrase.
+
+Important: Write it down and store it in a secure and offline place. Never share it with anyone.
+
+Confirm the phrase to complete setup.
+
+Your account is ready to use!
+
+Screenshot (150)
+
+Now in order to add tokens in the wallet we can add them via sepolia faucet, these are the test token because we can't efford the etherum coin , also for the learning purpose we use them , these faucet can be get from the Google Cloud.
+
+430856293-015216ac-1931-407c-a698-238a237f2c91
+
+in the above we need to select our network and add our public key then click on recieve. you will get some test tokens... Screenshot (156)
+
+Now if we want to send money,we can di it by....
+
+clicking on send
+
+Now enter the public key of whom you want to send tokens
+
+Then, add tokens
+
+And, continue
+
+Screenshot (161)
+
+Practical-4 To learn solidity through cryptozombie
+CryptoZombies is an interactive and game baesd platform where we can learn Solidity, the programming language used for writing smart contracts on the Ethereum blockchain. It teaches us by building a zombie game step-by-step. From different lessons we can learn the following:-
+
+Lesson 1: Making the Zombie Factory
+
+In this lesson we learned...
+
+Solidity basics
+
+Contract structure
+
+State variables
+
+Functions
+
+Events
+
+Here is the program I've created
+
+pragma solidity ^0.8.0;
+
+contract ZombieFactory {
+    event NewZombie(uint zombieId, string name, uint dna);
+
+    uint dnaDigits = 16;
+    uint dnaModulus = 10 ** dnaDigits;
+
+    struct Zombie {
+        string name;
+        uint dna;
+    }
+
+    Zombie[] public zombies;
+
+    function _createZombie(string memory _name, uint _dna) private {
+        zombies.push(Zombie(_name, _dna));
+        emit NewZombie(zombies.length - 1, _name, _dna);
+    }
+
+    function _generateRandomDna(string memory _str) private view returns (uint) {
+        return uint(keccak256(abi.encodePacked(_str))) % dnaModulus;
+    }
+
+    function createRandomZombie(string memory _name) public {
+        uint randDna = _generateRandomDna(_name);
+        _createZombie(_name, randDna);
+    }
+}
+
+Lesson 2: Zombie Attributes
+
+In this chapter we learnt:-
+
+to access modifiers (public, private, internal)
+
+msg.sender
+
+Mappings
+
+require statement
+
+mapping (uint => address) public zombieToOwner;
+mapping (address => uint) ownerZombieCount;
+
+function createRandomZombie(string memory _name) public {
+    require(ownerZombieCount[msg.sender] == 0);
+    uint randDna = _generateRandomDna(_name);
+    _createZombie(_name, randDna);
+    zombieToOwner[zombies.length - 1] = msg.sender;
+    ownerZombieCount[msg.sender]++;
+}
+Lesson 3: Advanced Solidity Concepts
+
+in this lesson we learned to...
+
+import
+
+Inheritance
+
+Function overriding
+
+import "./ZombieFactory.sol";
+
+contract ZombieFeeding is ZombieFactory {
+    function feedAndMultiply(uint _zombieId, uint _targetDna, string memory _species) public {
+        require(msg.sender == zombieToOwner[_zombieId]);
+        Zombie storage myZombie = zombies[_zombieId];
+        _targetDna = _targetDna % dnaModulus;
+        uint newDna = (myZombie.dna + _targetDna) / 2;
+        if (keccak256(abi.encodePacked(_species)) == keccak256(abi.encodePacked("kitty"))) {
+            newDna = newDna - newDna % 100 + 99;
+        }
+        _createZombie("NoName", newDna);
+    }
+}
+Lesson 4: Zombie Battle System
+
+we learnt...
+
+time units in Solidity (e.g., 1 days)
+
+Cooldowns
+
+Struct updates
+
+Randomness
+
+uint cooldownTime = 1 days;
+
+function _triggerCooldown(Zombie storage _zombie) internal {
+    _zombie.readyTime = uint32(block.timestamp + cooldownTime);
+}
+
+function _isReady(Zombie storage _zombie) internal view returns (bool) {
+    return (_zombie.readyTime <= block.timestamp);
+}
+Lesson 5: ERC721 & Crypto Collectibles In this lesson we learnt...
+
+ERC721 standard (NFTs)
+
+transferFrom, ownerOf
+
+Interfacing with other contracts
+
+import "./erc721.sol";
+
+contract ZombieOwnership is ERC721 {
+    mapping (uint => address) zombieApprovals;
+
+    function transferFrom(address _from, address _to, uint256 _tokenId) public override {
+        require(_from == msg.sender || zombieApprovals[_tokenId] == msg.sender);
+        ownerZombieCount[_to]++;
+        ownerZombieCount[_from]--;
+        zombieToOwner[_tokenId] = _to;
+        emit Transfer(_from, _to, _tokenId);
+    }
+}
