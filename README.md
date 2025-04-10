@@ -72,7 +72,7 @@ to install docker
 ```bash
 sudo snap install docker
 ```
-8a8af518-ddc5-45bb-b015-31e93945fda8
+
 
 to install git
 ```bash
@@ -228,16 +228,17 @@ ipfs add decrypted_file.txt
    ![photo_6314183803450541654_y](https://github.com/user-attachments/assets/cd7b4be2-d904-4a26-a988-33c1b4f2f4fe)
 
 
-Practical-3 Metamask
+**Practical-3 Metamask**
+
 What is metamask? MetaMask is a crypto wallet and gateway to blockchain applications. It lets you store, manage, and transfer cryptocurrencies, especially those on the Ethereum blockchain and other EVM-compatible networks (like BNB Chain, Polygon, Arbitrum, etc.).
 
 Steps to Create a MetaMask Account
 
-Step 1: Install MetaMask Browser Extension: Go to https://metamask.io and download the extension for Chrome, Firefox, Brave, or Edge.
+**Step 1:** Install MetaMask Browser Extension: Go to https://metamask.io and download the extension for Chrome, Firefox, Brave, or Edge.
 
 Mobile App: Alternatively, install the MetaMask app from Google Play Store or Apple App Store.
 
-Step 2: Create a New Wallet Click “Get Started”.
+**Step 2:** Create a New Wallet Click “Get Started”.
 
 Choose “Create a Wallet”.
 
@@ -245,7 +246,7 @@ Set a strong password (at least 8 characters).
 
 Agree to the terms and conditions.
 
-Step 3: Backup the Secret Recovery Phrase MetaMask will generate a 12-word Secret Recovery Phrase.
+**Step 3:** Backup the Secret Recovery Phrase MetaMask will generate a 12-word Secret Recovery Phrase.
 
 Important: Write it down and store it in a secure and offline place. Never share it with anyone.
 
@@ -253,7 +254,7 @@ Confirm the phrase to complete setup.
 
 Your account is ready to use!
 
-Screenshot (150)
+
 
 Now in order to add tokens in the wallet we can add them via sepolia faucet, these are the test token because we can't efford the etherum coin , also for the learning purpose we use them , these faucet can be get from the Google Cloud.
 
@@ -273,8 +274,10 @@ And, continue
 
 Screenshot (161)
 
-Practical-4 To learn solidity through cryptozombie
+**Practical-4** To learn solidity through cryptozombie
 CryptoZombies is an interactive and game baesd platform where we can learn Solidity, the programming language used for writing smart contracts on the Ethereum blockchain. It teaches us by building a zombie game step-by-step. From different lessons we can learn the following:-
+
+
 
 Lesson 1: Making the Zombie Factory
 
@@ -291,7 +294,7 @@ Functions
 Events
 
 Here is the program I've created
-
+```bash
 pragma solidity ^0.8.0;
 
 contract ZombieFactory {
@@ -322,6 +325,8 @@ contract ZombieFactory {
     }
 }
 
+```
+
 Lesson 2: Zombie Attributes
 
 In this chapter we learnt:-
@@ -333,7 +338,7 @@ msg.sender
 Mappings
 
 require statement
-
+```bash
 mapping (uint => address) public zombieToOwner;
 mapping (address => uint) ownerZombieCount;
 
@@ -344,6 +349,10 @@ function createRandomZombie(string memory _name) public {
     zombieToOwner[zombies.length - 1] = msg.sender;
     ownerZombieCount[msg.sender]++;
 }
+
+```
+
+
 Lesson 3: Advanced Solidity Concepts
 
 in this lesson we learned to...
@@ -353,7 +362,7 @@ import
 Inheritance
 
 Function overriding
-
+```bash
 import "./ZombieFactory.sol";
 
 contract ZombieFeeding is ZombieFactory {
@@ -368,6 +377,9 @@ contract ZombieFeeding is ZombieFactory {
         _createZombie("NoName", newDna);
     }
 }
+
+```
+
 Lesson 4: Zombie Battle System
 
 we learnt...
@@ -379,7 +391,7 @@ Cooldowns
 Struct updates
 
 Randomness
-
+```bash
 uint cooldownTime = 1 days;
 
 function _triggerCooldown(Zombie storage _zombie) internal {
@@ -389,6 +401,9 @@ function _triggerCooldown(Zombie storage _zombie) internal {
 function _isReady(Zombie storage _zombie) internal view returns (bool) {
     return (_zombie.readyTime <= block.timestamp);
 }
+```
+
+
 Lesson 5: ERC721 & Crypto Collectibles In this lesson we learnt...
 
 ERC721 standard (NFTs)
@@ -396,7 +411,7 @@ ERC721 standard (NFTs)
 transferFrom, ownerOf
 
 Interfacing with other contracts
-
+```bash
 import "./erc721.sol";
 
 contract ZombieOwnership is ERC721 {
@@ -410,3 +425,4 @@ contract ZombieOwnership is ERC721 {
         emit Transfer(_from, _to, _tokenId);
     }
 }
+```
