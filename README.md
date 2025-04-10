@@ -60,8 +60,9 @@ Blockchain technology has the potential to revolutionize industries by offering 
 It is a permissioned blockchain framework designed for enterprise use, offering modular architecture, privacy through private channels, and customizable consensus mechanisms. It ensures secure and scalable transactions, allowing businesses to build tailored solutions for supply chain, finance, and healthcare.
 
 to update the system
-
-'''bash sudo apt update'''
+```bash
+sudo apt update
+```
 to install golang-go
 
 sudo apt install golang-go
