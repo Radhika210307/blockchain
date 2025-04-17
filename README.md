@@ -267,11 +267,13 @@ Confirm the phrase to complete setup.
 
 Your account is ready to use!
 
+![image](https://github.com/user-attachments/assets/a1b13298-344e-4521-a766-774ec1ff1934)
 
 
 Now in order to add tokens in the wallet we can add them via sepolia faucet, these are the test token because we can't efford the etherum coin , also for the learning purpose we use them , these faucet can be get from the Google Cloud.
 
-430856293-015216ac-1931-407c-a698-238a237f2c91
+![image](https://github.com/user-attachments/assets/b8229727-6061-441c-ba2a-d53476e7a600)
+
 
 in the above we need to select our network and add our public key then click on recieve. you will get some test tokens... Screenshot (156)
 
