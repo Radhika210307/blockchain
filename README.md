@@ -166,7 +166,9 @@ to use daemon
 ```bash
 ipfs daemon
 ```
-1a10884d-f0be-43cb-8de2-a9a9d351dbd4 3907b456-4a88-48ba-947a-9a64cdeb1e73
+![image](https://github.com/user-attachments/assets/8e643ef9-5579-47ac-b216-725157bb5613)
+
+
 
 to add file
 ```bash
