@@ -133,10 +133,6 @@ to install IPFS
 wget https://dist.ipfs.io/kubo/v0.32.1/kubo_v0.32.1_linux-amd64.tar.gz
 ```
 
-![image](https://github.com/user-attachments/assets/0fe33b2c-01b3-4b3b-9d71-0a41739a3b43)
-
-e7b71e7d-a8d3-4b68-a3c9-2ed12403307a
-
 to use kubo
 ```bash
 tar -xvzf kubo_v0.32.1_linux-amd64.tar.gz
@@ -156,7 +152,8 @@ to initialise ipfs
 ```bash
 ipfs init
 ```
-a03f8658-b73e-4f68-8e4d-9396b86d367b
+
+![6323373766448629554](https://github.com/user-attachments/assets/375709fa-751c-4307-8991-4a3791578309)
 
 to use daemon
 ```bash
