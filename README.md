@@ -163,7 +163,7 @@ ipfs daemon
 
 to add file
 ```bash
-echo "Hello, komal!" > hello.txt
+echo "Hello,IPSE!" > hello.txt
 ```
 ```bash
 ipfs add hello.txt
@@ -171,9 +171,8 @@ ipfs add hello.txt
 ```bash
 ipfs cat <CID>
 ```
-f2a3158b-e70f-41ab-bac9-7e563878664e
+![6323373766448629550](https://github.com/user-attachments/assets/e176755a-e1c3-4333-a8e3-eab1f89cb0cd)
 
-28e2d85e-354f-45ac-adc5-d1c2507255f5
 
 to add a directory
 ```bash
@@ -200,7 +199,7 @@ kill <PID>
 ```
 encrypting and decrypting
 ```bash
-echo "hi komal" > myfile.txt
+echo "Hello, IPFS!" > myfile.txt
 ```
 ```bash
 ipfs add myfile.txt
@@ -223,7 +222,7 @@ cat decrypted_file.txt
 ```bash
 ipfs add decrypted_file.txt
 ```
-875effa0-41ee-4b1b-a2ae-9decfb23c4d8
+
 
 
 
