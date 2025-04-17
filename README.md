@@ -222,12 +222,13 @@ cat decrypted_file.txt
 ```bash
 ipfs add decrypted_file.txt
 ```
+![image](https://github.com/user-attachments/assets/e1ded46a-b0f2-4747-a280-0446c50de11a)
 
 
 
 
 
-   ![photo_6314183803450541654_y](https://github.com/user-attachments/assets/cd7b4be2-d904-4a26-a988-33c1b4f2f4fe)
+   
 
 
 **Practical-3 Metamask**
