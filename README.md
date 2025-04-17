@@ -171,7 +171,8 @@ ipfs add hello.txt
 ```bash
 ipfs cat <CID>
 ```
-![6323373766448629550](https://github.com/user-attachments/assets/e176755a-e1c3-4333-a8e3-eab1f89cb0cd)
+![image](https://github.com/user-attachments/assets/f8506aaa-4104-45eb-a372-e6832622da0e)
+
 
 
 to add a directory
