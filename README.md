@@ -132,12 +132,18 @@ to install IPFS
 ```bash
 wget https://dist.ipfs.io/kubo/v0.32.1/kubo_v0.32.1_linux-amd64.tar.gz
 ```
+
+![image](https://github.com/user-attachments/assets/0fe33b2c-01b3-4b3b-9d71-0a41739a3b43)
+
 e7b71e7d-a8d3-4b68-a3c9-2ed12403307a
 
 to use kubo
 ```bash
 tar -xvzf kubo_v0.32.1_linux-amd64.tar.gz
 ```
+
+![image](https://github.com/user-attachments/assets/1c77650e-6448-49e9-9ce1-b623476f409a)
+
 to get into kubo directory
 ```bash
 cd kubo
