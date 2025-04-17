@@ -72,6 +72,7 @@ to install docker
 ```bash
 sudo snap install docker
 ```
+![image](https://github.com/user-attachments/assets/7bd84d1a-0e06-4e2b-893a-e493c592f7a9)
 
 
 to install git
@@ -82,6 +83,10 @@ to install fabric-samples
 ```bash
 git clone -b main https://github.com/hyperledger/fabric-samples.git
 ```
+![image](https://github.com/user-attachments/assets/11fcb7c0-20a5-4e0d-9e88-dc125cc374f2)
+
+![image](https://github.com/user-attachments/assets/5d855cfe-ea8a-4c17-89f6-be9c8a721439)
+
 to install curl
 ```bash
 sudo apt install curl
@@ -97,6 +102,7 @@ to pull hyperledger docker images
 sudo bash
 curl -sSL https://bit.ly/2ysbOFE | bash -s
 ```
+![image](https://github.com/user-attachments/assets/cec7a1f7-c210-4f27-8bbf-38adbc9096ca)
 
 ed4f2ca3-9832-4180-aae7-cd793f2fc674
 
@@ -115,6 +121,7 @@ to create channel
 ```bash
 ./network.sh createChannel
 ```
+![image](https://github.com/user-attachments/assets/b8866bcb-c349-4bec-b549-bb9467fb7353)
 
 577607d3-e238-48f2-aaed-4b79ad64bb35
 
