@@ -287,7 +287,7 @@ Then, add tokens
 
 And, continue
 
-Screenshot (161)
+
 
 **Practical-4** To learn solidity through cryptozombie
 CryptoZombies is an interactive and game baesd platform where we can learn Solidity, the programming language used for writing smart contracts on the Ethereum blockchain. It teaches us by building a zombie game step-by-step. From different lessons we can learn the following:-
