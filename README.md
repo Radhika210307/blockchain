@@ -286,6 +286,10 @@ Now enter the public key of whom you want to send tokens
 Then, add tokens
 
 And, continue
+![image](https://github.com/user-attachments/assets/75c012d9-c216-4b56-8065-7b2fdc6114b3)
+
+![Uploading image.png…]()
+
 
 
 
