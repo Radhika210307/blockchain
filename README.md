@@ -449,6 +449,8 @@ contract ZombieOwnership is ERC721 {
     }
 }
 ```
+![image](https://github.com/user-attachments/assets/3217698d-e82d-4cf2-892c-586183dc39a7)
+
 
 
 **Q Create a voting system with multiple candidates. Each address can vote only once.
