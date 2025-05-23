@@ -504,7 +504,7 @@ contract Voting {
 
 
 ![image](https://github.com/user-attachments/assets/161a0f74-5992-4532-a580-c62555f2237d)
-![image](https://github.com/user-attachments/assets/419c6f05-4495-45fb-bd5d-461550229f33)
+
 
 
 
