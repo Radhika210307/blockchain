@@ -453,7 +453,10 @@ contract ZombieOwnership is ERC721 {
 
 
 
-**Q Create a voting system with multiple candidates. Each address can vote only once.
+**final practicals**
+
+
+**1. Create a voting system with multiple candidates. Each address can vote only once.
 **
 CODE 
 ```
@@ -501,5 +504,158 @@ contract Voting {
 
 
 ![image](https://github.com/user-attachments/assets/161a0f74-5992-4532-a580-c62555f2237d)
+
+
+
+2. Write a contract that manages a list of student records(name,roll number).Allow adding and retieving student data.
+CODE
+```
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract StudentRecords {
+    struct Student {
+        string name;
+        uint rollNo;
+    }
+
+    Student[] public students;
+
+    function addStudent(string memory _name, uint _rollNo) public {
+        students.push(Student(_name, _rollNo));
+    }
+
+    function getStudent(uint index) public view returns (string memory, uint) {
+        require(index < students.length, "Invalid index.");
+        Student memory s = students[index];
+        return (s.name, s.rollNo);
+    }
+}
+```
+
+3. Develope a contract that only allows the developer (owner) to call a specific function (use modifiers).
+
+CODE 
+```
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract OwnerOnly {
+    address public owner;
+
+    constructor() {
+        owner = msg.sender;
+    }
+
+    modifier onlyOwner() {
+        require(msg.sender == owner, "Only owner can call this.");
+        _;
+    }
+
+    function secretFunction() public onlyOwner view returns (string memory) {
+        return "Owner Access Granted.";
+    }
+}
+```
+
+
+4.Write a contract where people can donate Ether and the top 3 donors are tracked.
+
+CODE 
+```
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract DonationTracker {
+    struct Donor {
+        address addr;
+        uint amount;
+    }
+
+    Donor[3] public topDonors;
+
+    function donate() public payable {
+        require(msg.value > 0, "Donation must be greater than zero.");
+        updateTopDonors(msg.sender, msg.value);
+    }
+
+    function updateTopDonors(address _addr, uint _amount) internal {
+        for (uint i = 0; i < 3; i++) {
+            if (_amount > topDonors[i].amount) {
+                for (uint j = 2; j > i; j--) {
+                    topDonors[j] = topDonors[j-1];
+                }
+                topDonors[i] = Donor(_addr, _amount);
+                break;
+            }
+        }
+    }
+
+    function getTopDonors() public view returns (Donor[3] memory) {
+        return topDonors;
+    }
+}
+```
+
+
+5.Implement a simple auction system where users can place bids, and the highest bidder wins.
+CODE 
+```
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract SimpleAuction {
+    address public highestBidder;
+    uint public highestBid;
+
+    function bid() public payable {
+        require(msg.value > highestBid, "Bid must be higher than current highest.");
+
+        // Refund the previous bidder
+        payable(highestBidder).transfer(highestBid);
+
+        highestBidder = msg.sender;
+        highestBid = msg.value;
+    }
+
+    function getWinner() public view returns (address, uint) {
+        return (highestBidder, highestBid);
+    }
+}
+```
+
+
+6.Create a contract that splits incoimg Ether betwwen 3 fixed addresses.
+CODE 
+```
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract EtherSplitter {
+    address payable public addr1;
+    address payable public addr2;
+    address payable public addr3;
+
+    constructor(address payable _a1, address payable _a2, address payable _a3) {
+        addr1 = _a1;
+        addr2 = _a2;
+        addr3 = _a3;
+    }
+
+    receive() external payable {
+        uint amount = msg.value / 3;
+        addr1.transfer(amount);
+        addr2.transfer(amount);
+        addr3.transfer(msg.value - 2 * amount); // Remainder goes to addr3
+    }
+}
+```
+
+
+
+
+
+
+
 
 
