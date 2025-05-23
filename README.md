@@ -504,6 +504,7 @@ contract Voting {
 
 
 ![image](https://github.com/user-attachments/assets/161a0f74-5992-4532-a580-c62555f2237d)
+![image](https://github.com/user-attachments/assets/419c6f05-4495-45fb-bd5d-461550229f33)
 
 
 
@@ -532,6 +533,8 @@ contract StudentRecords {
     }
 }
 ```
+![image](https://github.com/user-attachments/assets/e93c3563-739b-4daf-955b-e57ef88bc056)
+
 
 3. Develope a contract that only allows the developer (owner) to call a specific function (use modifiers).
 
@@ -557,6 +560,8 @@ contract OwnerOnly {
     }
 }
 ```
+![image](https://github.com/user-attachments/assets/70f69025-ac3c-41ec-8737-18e0b27b8f6c)
+
 
 
 4.Write a contract where people can donate Ether and the top 3 donors are tracked.
@@ -596,6 +601,8 @@ contract DonationTracker {
     }
 }
 ```
+![image](https://github.com/user-attachments/assets/3b13a91c-d824-46bd-adcb-bed3ebb17614)
+
 
 
 5.Implement a simple auction system where users can place bids, and the highest bidder wins.
@@ -623,6 +630,8 @@ contract SimpleAuction {
     }
 }
 ```
+![image](https://github.com/user-attachments/assets/335fd16e-54bb-4017-98f4-1d4e2c864c62)
+
 
 
 6.Create a contract that splits incoimg Ether betwwen 3 fixed addresses.
@@ -650,6 +659,7 @@ contract EtherSplitter {
     }
 }
 ```
+![image](https://github.com/user-attachments/assets/e853bf8d-325a-4ee6-bff1-a445b53a6e3f)
 
 
 
